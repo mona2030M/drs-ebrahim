@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سورة إبراهيم - الآيات 24-31 | استراتيجيات وأفكار</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #d4af37;
+    --dark-green: #0d3b2e;
+    --deep-green: #14503d;
+    --light-green: #1b6b51;
+    --cream: #f8f4e9;
+    --text-dark: #1a1a1a;
+  }
+
+  body {
+    font-family: 'Tajawal', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.8;
+  }
+
+  /* ===== الهيدر ===== */
+  header {
+    background: linear-gradient(135deg, var(--dark-green), var(--light-green));
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(212,175,55,0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(212,175,55,0.15) 0%, transparent 50%);
+  }
+
+  header > * { position: relative; z-index: 1; }
+
+  header h1 {
+    font-family: 'Amiri', serif;
+    font-size: 2.8rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  }
+
+  header p {
+    font-size: 1.15rem;
+    opacity: 0.95;
+  }
+
+  .bismillah {
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  /* ===== التنقل ===== */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(13, 59, 46, 0.97);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    z-index: 100;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 25px;
+    background: rgba(212,175,55,0.15);
+    border: 1px solid rgba(212,175,55,0.4);
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  nav a:hover {
+    background: var(--gold);
+    color: var(--dark-green);
+    transform: translateY(-2px);
+  }
+
+  /* ===== الحاويات ===== */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+
+  section {
+    margin-bottom: 60px;
+    scroll-margin-top: 80px;
+  }
+
+  .section-title {
+    font-family: 'Amiri', serif;
+    font-size: 2rem;
+    color: var(--dark-green);
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--gold);
+    display: inline-block;
+    position: relative;
+  }
+
+  .section-title::before {
+    content: "❁";
+    color: var(--gold);
+    margin-left: 12px;
+  }
+
+  /* ===== بطاقة الآيات ===== */
+  .ayah-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(13,59,46,0.12);
+    border: 2px solid var(--gold);
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .ayah-card::before {
+    content: "";
+    position: absolute;
+    top: 10px; right: 10px; bottom: 10px; left: 10px;
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 12px;
+    pointer-events: none;
+  }
+
+  .ayah-number {
+    display: inline-block;
+    background: var(--dark-green);
+    color: var(--gold);
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .ayah-text {
+    font-family: 'Amiri', serif;
+    font-size: 1.6rem;
+    line-height: 2.4;
+    text-align: center;
+    color: var(--deep-green);
+    margin: 20px 0;
+    direction: rtl;
+  }
+
+  .ayah-text .highlight {
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  .ayah-desc {
+    background: var(--cream);
+    padding: 18px;
+    border-radius: 12px;
+    border-right: 4px solid var(--gold);
+    margin-top: 20px;
+    font-size: 1.05rem;
+  }
+
+  /* ===== الصور التوضيحية ===== */
+  .image-box {
+    margin: 25px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    position: relative;
+  }
+
+  .image-box svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .image-caption {
+    background: rgba(13,59,46,0.95);
+    color: var(--gold);
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Amiri', serif;
+  }
+
+  /* ===== استراتيجيات ===== */
+  .strategy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+  }
+
+  .strategy-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(13,59,46,0.1);
+    border-top: 5px solid var(--gold);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .strategy-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(13,59,46,0.2);
+  }
+
+  .strategy-card h3 {
+    color: var(--dark-green);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .strategy-card h3::before {
+    content: "◆";
+    color: var(--gold);
+  }
+
+  .strategy-card p, .strategy-card li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+  }
+
+  .strategy-card ul { padding-right: 20px; }
+
+  /* ===== جدول المقارنة ===== */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    margin-top: 20px;
+  }
+
+  .compare-table th {
+    background: var(--dark-green);
+    color: var(--gold);
+    padding: 15px;
+    font-size: 1.05rem;
+    font-family: 'Amiri', serif;
+  }
+
+  .compare-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+  }
+
+  .compare-table tr:nth-child(even) { background: #faf8f1; }
+  .compare-table tr:hover { background: #f0ebdc; }
+
+  .compare-table td:first-child {
+    font-weight: 700;
+    color: var(--deep-green);
+    background: rgba(212,175,55,0.1);
+  }
+
+  /* ===== معاني الكلمات ===== */
+  .words-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .word-card {
+    background: linear-gradient(135deg, var(--deep-green), var(--light-green));
+    color: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid var(--gold);
+  }
+
+  .word-card:hover { transform: scale(1.05); }
+
+  .word-card .word {
+    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .word-card .meaning {
+    font-size: 0.95rem;
+    opacity: 0.95;
+  }
+
+  /* ===== الأنشطة ===== */
+  .activity {
+    background: linear-gradient(135deg, #fff, #faf8f1);
+    border-right: 5px solid var(--gold);
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+  }
+
+  .activity h4 {
+    color: var(--dark-green);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .activity-badge {
+    background: var(--gold);
+    color: var(--dark-green);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+  }
+
+  /* ===== الفوتر ===== */
+  footer {
+    background: var(--dark-green);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.95rem;
+  }
+
+  footer .dua {
+    font-family: 'Amiri', serif;
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  /* ===== استجابة الجوال ===== */
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.9rem; }
+    .bismillah { font-size: 1.4rem; }
+    .section-title { font-size: 1.5rem; }
+    .ayah-text { font-size: 1.25rem; line-height: 2.1; }
+    .ayah-card { padding: 22px; }
+    nav a { font-size: 0.85rem; padding: 6px 14px; }
+    .compare-table { font-size: 0.85rem; }
+    .compare-table th, .compare-table td { padding: 10px 6px; }
+  }
+
+  /* ===== تأثير الظهور ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s, transform 0.7s;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+  <h1>سورة إبراهيم</h1>
+  <p>الآيات (24 - 31) | استراتيجيات وأفكار تدريسية</p>
+</header>
+
+<nav>
+  <a href="#ayahs">الآيات</a>
+  <a href="#mothal">المثلان</a>
+  <a href="#compare">المقارنة</a>
+  <a href="#strategies">الاستراتيجيات</a>
+  <a href="#words">معاني الكلمات</a>
+  <a href="#activities">الأنشطة</a>
+</nav>
+
+<div class="container">
+
+  <!-- ===== الآيات ===== -->
+  <section id="ayahs" class="fade-in">
+    <h2 class="section-title">الآيات الكريمة</h2>
+
+    <div class="ayah-card">
+      <span class="ayah-number">الآية 24</span>
+      <div class="ayah-text">
+        أَلَمْ تَرَ كَيْفَ ضَرَبَ اللَّهُ مَثَلًا <span class="highlight">كَلِمَةً طَيِّبَةً</span> كَشَجَرَةٍ طَيِّبَةٍ أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِي السَّمَاءِ
+      </div>
+
+      <!-- صورة توضيحية: الشجرة الطيبة -->
+      <div class="image-box">
+        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#87CEEB"/>
+              <stop offset="100%" stop-color="#E0F6FF"/>
+            </linearGradient>
+            <linearGradient id="trunkGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#5D4037"/>
+              <stop offset="100%" stop-color="#8D6E63"/>
+            </linearGradient>
+            <radialGradient id="leafGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#4CAF50"/>
+              <stop offset="100%" stop-color="#2E7D32"/>
+            </radialGradient>
+          </defs>
+
+          <!-- السماء -->
+          <rect width="800" height="450" fill="url(#skyGrad)"/>
+          <!-- الشمس -->
+          <circle cx="680" cy="80" r="45" fill="#FFD54F" opacity="0.9"/>
+          <circle cx="680" cy="80" r="60" fill="#FFD54F" opacity="0.25"/>
+          <!-- الأرض -->
+          <rect y="380" width="800" height="70" fill="#8D6E63"/>
+          <rect y="380" width="800" height="10" fill="#6D4C41"/>
+
+          <!-- جذور -->
+          <path d="M400 380 Q370 400 340 420 M400 380 Q430 400 460 420 M400 380 Q400 405 400 425" 
+                stroke="#5D4037" stroke-width="4" fill="none" stroke-linecap="round"/>
+          
+          <!-- الجذع -->
+          <path d="M385 380 L385 220 Q400 200 415 220 L415 380 Z" fill="url(#trunkGrad)"/>
+          
+          <!-- الأوراق/الفرع -->
+          <ellipse cx="400" cy="180" rx="130" ry="90" fill="url(#leafGrad)"/>
+          <ellipse cx="320" cy="200" rx="80" ry="60" fill="#43A047"/>
+          <ellipse cx="480" cy="200" rx="80" ry="60" fill="#43A047"/>
+          <ellipse cx="400" cy="130" rx="90" ry="55" fill="#66BB6A"/>
+          
+          <!-- الثمار -->
+          <circle cx="360" cy="180" r="12" fill="#FF7043"/>
+          <circle cx="440" cy="180" r="12" fill="#FF7043"/>
+          <circle cx="400" cy="150" r="12" fill="#FF7043"/>
+          <circle cx="340" cy="210" r="10" fill="#FF7043"/>
+          <circle cx="460" cy="210" r="10" fill="#FF7043"/>
+
+          <!-- النصوص -->
+          <text x="400" y="55" text-anchor="middle" font-family="Amiri, serif" font-size="28" fill="#0D3B2E" font-weight="bold">الشجرة الطيبة</text>
+          <text x="400" y="95" text-anchor="middle" font-family="Tajawal, sans-serif" font-size="18" fill="#1B6B51">أصلها ثابت • فرعها في السماء • تؤتي أكلها كل حين</text>
+          
+          <!-- الأصل الثابت -->
+          <text x="400" y="445" text-anchor="middle" font-family="Amiri, serif" font-size="20" fill="#0D3B2E" font-weight="bold">الجذور الثابتة = كلمة التوحيد</text>
+        </svg>
+        <div class="image-caption">﴿كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ﴾</div>
+      </div>
+
+      <div class="ayah-desc">
+        💡 <strong>الشرح:</strong> ضرب الله مثلاً للكلمة الطيبة (كلمة التوحيد: لا إله إلا الله) بالشجرة الطيبة؛ 
+        لأن أصلها ثابت في الأرض، وفرعها مرتفع في السماء، وثمرها دائم لا ينقطع.
+      </div>
+    </div>
+
+    <div class="ayah-card">
+      <span class="ayah-number">الآية 26</span>
+      <div class="ayah-text">
+        وَمَثَلُ <span class="highlight">كَلِمَةٍ خَبِيثَةٍ</span> كَشَجَرَةٍ خَبِيثَةٍ اجْتُثَّتْ مِن فَوْقِ الْأَرْضِ مَا لَهَا مِن قَرَارٍ
+      </div>
+
+      <!-- صورة توضيحية: الشجرة الخبيثة -->
+      <div class="image-box">
+        <svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="darkSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#5D4037"/>
+              <stop offset="100%" stop-color="#3E2723"/>
+            </linearGradient>
+          </defs>
+          
+          <!-- سماء داكنة -->
+          <rect width="800" height="450" fill="url(#darkSky)"/>
+          
+          <!-- أرض متشققة -->
+          <rect y="380" width="800" height="70" fill="#4E342E"/>
+          <path d="M100 380 L120 450 M300 380 L310 450 M500 380 L490 450 M700 380 L720 450" 
+                stroke="#3E2723" stroke-width="2"/>
+
+          <!-- الشجرة المقتلعة -->
+          <g transform="rotate(-30 400 300)">
+            <path d="M390 380 L390 240 Q400 220 410 240 L410 380 Z" fill="#6D4C41"/>
+            <ellipse cx="400" cy="200" rx="100" ry="70" fill="#4E342E"/>
+            <ellipse cx="350" cy="220" rx="60" ry="45" fill="#3E2723"/>
+            <ellipse cx="450" cy="220" rx="60" ry="45" fill="#3E2723"/>
+          </g>
+
+          <!-- الجذور الظاهرة في الهواء (اجتثت) -->
+          <path d="M380 340 Q350 360 330 390 M420 340 Q450 360 470 390 M400 340 Q400 370 400 400" 
+                stroke="#8D6E63" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+
+          <!-- رمز X -->
+          <text x="400" y="55" text-anchor="middle" font-family="Amiri, serif" font-size="28" fill="#FFCDD2" font-weight="bold">الشجرة الخبيثة</text>
+          <text x="400" y="95" text-anchor="middle" font-family="Tajawal, sans-serif" font-size="18" fill="#EF9A9A">اجتثت من فوق الأرض • ما لها من قرار</text>
+          
+          <text x="400" y="445" text-anchor="middle" font-family="Amiri, serif" font-size="20" fill="#FFCDD2" font-weight="bold">لا أصل • لا ثبات • لا ثمر</text>
+        </svg>
+        <div class="image-caption">﴿كَلِمَةٍ خَبِيثَةٍ كَشَجَرَةٍ خَبِيثَةٍ اجْتُثَّتْ﴾</div>
+      </div>
+
+      <div class="ayah-desc">
+        💡 <strong>الشرح:</strong> الكلمة الخبيثة (كلمة الشرك والكفر) كشجرة سيئة مقتلعة من جذورها، 
+        لا قرار لها ولا ثبات، فلا أصل راسخ ولا ثمر نافع.
+      </div>
+    </div>
+
+    <div class="ayah-card">
+      <span class="ayah-number">الآية 27</span>
+      <div class="ayah-text">
+        يُثَبِّتُ اللَّهُ الَّذِينَ آمَنُوا بِالْقَوْلِ <span class="highlight">الثَّابِتِ</span> فِي الْحَيَاةِ الدُّنْيَا وَفِي الْآخِرَةِ ۖ 
+        وَيُضِلُّ اللَّهُ الظَّالِمِينَ ۚ وَيَفْعَلُ اللَّهُ مَا يَشَاءُ
+      </div>
+
+      <div class="image-box">
+        <svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lightGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFF9C4"/>
+              <stop offset="100%" stop-color="#FFFDE7"/>
+            </linearGradient>
+          </defs>
+          
+          <rect width="800" height="350" fill="url(#lightGrad)"/>
+          
+          <!-- نور من الأعلى -->
+          <path d="M400 0 L250 350 L550 350 Z" fill="#FFD54F" opacity="0.3"/>
+          <circle cx="400" cy="30" r="40" fill="#FFC107" opacity="0.8"/>
+          
+          <!-- شخص ثابت (المؤمن) -->
+          <g transform="translate(400, 220)">
+            <!-- الجسم -->
+            <ellipse cx="0" cy="40" rx="35" ry="60" fill="#2E7D32"/>
+            <!-- الرأس -->
+            <circle cx="0" cy="-30" r="28" fill="#FBC02D"/>
+            <!-- اليدان مرفوعتان بالدعاء -->
+            <path d="M-30 0 Q-60 -40 -50 -70" stroke="#2E7D32" stroke-width="12" fill="none" stroke-linecap="round"/>
+            <path d="M30 0 Q60 -40 50 -70" stroke="#2E7D32" stroke-width="12" fill="none" stroke-linecap="round"/>
+          </g>
+          
+          <!-- أرضية -->
+          <rect y="300" width="800" height="50" fill="#8D6E63"/>
+          <!-- الجذور الثابتة -->
+          <path d="M380 320 Q360 340 340 350 M420 320 Q440 340 460 350 M400 320 Q400 340 400 350" 
+                stroke="#5D4037" stroke-width="4" fill="none" stroke-linecap="round"/>
+          
+          <text x="400" y="60" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#0D3B2E" font-weight="bold">﴿يُثَبِّتُ اللَّهُ الَّذِينَ آمَنُوا﴾</text>
+        </svg>
+        <div class="image-caption">الثبات على القول الثابت في الدنيا والآخرة</div>
+      </div>
+
+      <div class="ayah-desc">
+        💡 <strong>الشرح:</strong> يثبّت الله المؤمنين على كلمة الحق في الدنيا عند السؤال والفتنة، 
+        وفي الآخرة عند سؤال الملكين في القبر، ويُضل الظالمين بعدلِه.
+      </div>
+    </div>
+
+    <div class="ayah-card">
+      <span class="ayah-number">الآية 31</span>
+      <div class="ayah-text">
+        قُل لِّعِبَادِيَ الَّذِينَ آمَنُوا <span class="highlight">يُقِيمُوا الصَّلَاةَ</span> 
+        وَيُنفِقُوا مِمَّا رَزَقْنَاهُمْ سِرًّا وَعَلَانِيَةً 
+        مِّن قَبْلِ أَن يَأْتِيَ يَوْمٌ لَّا بَيْعٌ فِيهِ وَلَا خِلَالٌ
+      </div>
+
+      <div class="image-box">
+        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="prayerGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1A237E"/>
+              <stop offset="100%" stop-color="#4A148C"/>
+            </linearGradient>
+          </defs>
+          
+          <rect width="800" height="400" fill="url(#prayerGrad)"/>
+          
+          <!-- نجوم -->
+          <circle cx="100" cy="60" r="2" fill="#fff"/>
+          <circle cx="200" cy="90" r="1.5" fill="#fff"/>
+          <circle cx="600" cy="50" r="2" fill="#fff"/>
+          <circle cx="700" cy="100" r="1.5" fill="#fff"/>
+          <circle cx="350" cy="40" r="1.5" fill="#fff"/>
+          <circle cx="500" cy="70" r="2" fill="#fff"/>
+          
+          <!-- الهلال -->
+          <circle cx="150" cy="100" r="30" fill="#FFD54F"/>
+          <circle cx="165" cy="90" r="28" fill="#1A237E"/>
+          
+          <!-- مسجد بقبة -->
+          <g transform="translate(400, 250)">
+            <!-- القبة -->
+            <path d="M-80 0 Q0 -100 80 0 Z" fill="#D4AF37"/>
+            <circle cx="0" cy="-70" r="8" fill="#FFD54F"/>
+            <!-- المبنى -->
+            <rect x="-80" y="0" width="160" height="100" fill="#2E7D32"/>
+            <!-- المآذن -->
+            <rect x="-100" y="-30" width="15" height="130" fill="#D4AF37"/>
+            <path d="M-100 -30 L-92 -50 L-85 -30 Z" fill="#D4AF37"/>
+            <rect x="85" y="-30" width="15" height="130" fill="#D4AF37"/>
+            <path d="M85 -30 L93 -50 L100 -30 Z" fill="#D4AF37"/>
+            <!-- الباب -->
+            <path d="M-20 100 L-20 50 Q0 30 20 50 L20 100 Z" fill="#FFD54F"/>
+          </g>
+          
+          <!-- شخصان يتصدقان -->
+          <g transform="translate(180, 300)">
+            <circle cx="0" cy="0" r="20" fill="#FFCC80"/>
+            <rect x="-18" y="15" width="36" height="45" rx="8" fill="#E57373"/>
+          </g>
+          <g transform="translate(620, 300)">
+            <circle cx="0" cy="0" r="20" fill="#FFCC80"/>
+            <rect x="-18" y="15" width="36" height="45" rx="8" fill="#64B5F6"/>
+          </g>
+          
+          <!-- عملة/إنفاق -->
+          <circle cx="400" cy="330" r="15" fill="#FFD54F"/>
+          <text x="400" y="337" text-anchor="middle" font-size="18" fill="#0D3B2E" font-weight="bold">﷼</text>
+          
+          <text x="400" y="370" text-anchor="middle" font-family="Amiri, serif" font-size="22" fill="#FFD54F" font-weight="bold">إقامة الصلاة • الإنفاق سرًّا وعلانية</text>
+        </svg>
+        <div class="image-caption">﴿يُقِيمُوا الصَّلَاةَ وَيُنفِقُوا مِمَّا رَزَقْنَاهُمْ﴾</div>
+      </div>
+
+      <div class="ayah-desc">
+        💡 <strong>الشرح:</strong> أمر الله المؤمنين بإقامة الصلاة والإنفاق من الرزق في السر والعلن، 
+        قبل مجيء يوم القيامة الذي لا ينفع فيه بيع ولا صداقة.
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== جدول المقارنة ===== -->
+  <section id="compare" class="fade-in">
+    <h2 class="section-title">الجدول التقابلي بين المثلين</h2>
+
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>وجه المقارنة</th>
+          <th>الشجرة الطيبة 🌳</th>
+          <th>الشجرة الخبيثة 🍂</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>الأصل</td><td>ثابت ورسيخ</td><td>مقتلع من فوق الأرض</td></tr>
+        <tr><td>الفرع</td><td>في السماء</td><td>لا قرار له</td></tr>
+        <tr><td>الثمر</td><td>يؤتي أكله كل حين</td><td>لا ثمر</td></tr>
+        <tr><td>التمثيل</td><td>كلمة التوحيد (لا إله إلا الله)</td><td>كلمة الشرك والكفر</td></tr>
+        <tr><td>العاقبة</td><td>ثبات في الدنيا والآخرة</td><td>ضلال وهلاك</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ===== الاستراتيجيات ===== -->
+  <section id="strategies" class="fade-in">
+    <h2 class="section-title">الاستراتيجيات التدريسية</h2>
+
+    <div class="strategy-grid">
+      <div class="strategy-card">
+        <h3>البطاقة التعريفية</h3>
+        <p>كتابة بطاقة تعريف بسورة إبراهيم: مكية، 52 آية، سبب التسمية، ثم اكتشاف علاقة الاسم بالمقطع.</p>
+      </div>
+
+      <div class="strategy-card">
+        <h3>الجدول التقابلي</h3>
+        <p>مقارنة بين الكلمة الطيبة والخبيثة من خلال جدول يوضح: الأصل، الفرع، الثمر، العاقبة.</p>
+      </div>
+
+      <div class="strategy-card">
+        <h3>الأسئلة والأجوبة</h3>
+        <ul>
+          <li>ما فائدة ضرب الأمثال؟</li>
+          <li>ما الشجرة الطيبة؟ (النخلة)</li>
+          <li>ما وجه الشبه بين التوحيد والنخلة؟</li>
+        </ul>
+      </div>
+
+      <div class="strategy-card">
+        <h3>الربط بالواقع</h3>
+        <p>متى يكون الإنفاق في العلن أفضل من السر؟ الجواب: عند تشجيع الآخرين وتحفيزهم.</p>
+      </div>
+
+      <div class="strategy-card">
+        <h3>التطبيق العملي</h3>
+        <p>جدول متابعة الصلاة لمدة أسبوع، ثم مناقشة أثر إقامة الصلاة في ثبات القلب.</p>
+      </div>
+
+      <div class="strategy-card">
+        <h3>التعلم التعاوني</h3>
+        <p>تقسيم الطالبات لمجموعات، كل مجموعة تستنبط عبادة قلبية من الآيات.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== معاني الكلمات ===== -->
+  <section id="words" class="fade-in">
+    <h2 class="section-title">معاني الكلمات</h2>
+
+    <div class="words-grid">
+      <div class="word-card">
+        <div class="word">كلمة طيبة</div>
+        <div class="meaning">كلمة التوحيد (لا إله إلا الله)</div>
+      </div>
+      <div class="word-card">
+        <div class="word">كلمة خبيثة</div>
+        <div class="meaning">كلمة الشرك بالله</div>
+      </div>
+      <div class="word-card">
+        <div class="word">اجتُثَّت</div>
+        <div class="meaning">اقتُلعت من جذورها</div>
+      </div>
+      <div class="word-card">
+        <div class="word">قرار</div>
+        <div class="meaning">ثبات واستقرار</div>
+      </div>
+      <div class="word-card">
+        <div class="word">دار البوار</div>
+        <div class="meaning">دار الهلاك (جهنم)</div>
+      </div>
+      <div class="word-card">
+        <div class="word">خِلال</div>
+        <div class="meaning">صداقة وخُلّة</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== الأنشطة ===== -->
+  <section id="activities" class="fade-in">
+    <h2 class="section-title">الأنشطة التطبيقية</h2>
+
+    <div class="activity">
+      <h4><span class="activity-badge">1</span> نشاط رسم الشجرة</h4>
+      <p>ترسم الطالبات شجرة نخلة مع كتابة: الجذور (كلمة التوحيد)، الجذع (الإيمان)، الفروع (الأعمال الصالحة)، الثمار (الأخلاق الحسنة).</p>
+    </div>
+
+    <div class="activity">
+      <h4><span class="activity-badge">2</span> قصة ابن عمر مع النخلة</h4>
+      <p>قراءة قصة ابن عمر مع النبي ﷺ حين قال: "إن من الشجر شجرة لا يطرح ورقها مثل المؤمن"، ثم استنباط الدرس التربوي.</p>
+    </div>
+
+    <div class="activity">
+      <h4><span class="activity-badge">3</span> الاستنباط الجماعي</h4>
+      <p>تقسيم الطالبات لمجموعات، وكل مجموعة تستنبط عبادة قلبية: التوكل، اليقين، التفكر، الخوف من الظلم.</p>
+    </div>
+
+    <div class="activity">
+      <h4><span class="activity-badge">4</span> الكلمة الطيبة</h4>
+      <p>كل طالبة تكتب كلمة طيبة ستكررها هذا الأسبوع، ثم مناقشة أثرها في العلاقات مع الآخرين.</p>
+    </div>
+
+    <div class="activity">
+      <h4><span class="activity-badge">5</span> تطبيق الإنفاق</h4>
+      <p>تسجيل موقف عملي قامت به الطالبة بالإنفاق (سرًّا أو علنًا) خلال الأسبوع، ومشاركته مع الصف.</p>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="dua">﴿رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنتَ السَّمِيعُ الْعَلِيمُ﴾</div>
+  <p>موقع تعليمي لتدريس سورة إبراهيم — الآيات 24 إلى 31</p>
+</footer>
+
+<script>
+  // تأثير الظهور التدريجي عند التمرير
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // تمرير ناعم للروابط
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>
